@@ -52,6 +52,11 @@ function createTask() {
     updateScreen();
 }
 
+function cleanAllTasks() {
+    tasks = [];
+
+    updateScreen();
+}
 
 
 //Criação da função para deletar uma tarefa

@@ -89,6 +89,26 @@ main{
     background-color: rgb(103, 103, 207);
 }
 
+#cleanButton{
+    height: 33px;
+    margin-top: 10px;
+
+    background-color: rgb(131, 60, 60);
+    color: white;
+
+    border:none;
+    border-radius: 5px;
+
+    transform: translateY(+4%);
+    transition: 0.3s;
+
+}
+
+#cleanButton:hover{
+    background-color: rgb(177, 114, 114);
+
+}
+
 #deleteButton{
     margin-left: 30px;
     height: 20px;

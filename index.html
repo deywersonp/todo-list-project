@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="titles">TODO List</h1>
+            <h2 class="titles">Bem Vinde a sua Lista de Tarefas</h2>
+        </header>
+
+        <main>
+            <input id="newTask" class="align" type="text" placeholder="Digite a nova tarefa">
+            <button id="insertButton" class="align" onclick="createTask()">Incluir</button>
+
+            <div id="list">
+
+            </div>
+        </main>
+
+        <footer>
+            <p>Developed by: <a href='https://github.com/deywersonp'>Deywerson Pereira</a></p>
+            <span>All rights Reserved</span>
+        </footer>
+    </div>
+</body>
+
+<script src="./src/js/task.js"></script>
+
+</html>

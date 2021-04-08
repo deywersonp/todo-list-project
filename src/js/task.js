@@ -49,24 +49,8 @@ function createTask() {
 
     tasks.push(task);
 
-    updateScreen();
+    addLocalStorage(tasks);
 }
-
-function cleanAllTasks() {
-    tasks = [];
-
-    updateScreen();
-}
-
-
-//Criação da função para deletar uma tarefa
-function deleteTask(element) {
-    tasks = tasks.filter(task => task.id != element.getAttribute("id-data"));
-
-    updateScreen();
-
-}
-
 
 //Acionamento do botão INSERIR atavés da tecla "ENTER"
 document.addEventListener("keypress", function (enter) {
@@ -77,3 +61,37 @@ document.addEventListener("keypress", function (enter) {
     }
 
 })
+
+
+//Criação da função para deletar uma tarefa
+function deleteTask(element) {
+    tasks = tasks.filter(task => task.id != element.getAttribute("id-data"));
+
+    addLocalStorage(tasks);
+
+}
+
+function cleanAllTasks() {
+    tasks = [];
+
+    addLocalStorage(tasks);
+}
+
+function addLocalStorage(tasks) {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    updateScreen();
+}
+
+function getFromLocalStorage() {
+
+    const reference = localStorage.getItem('tasks');
+
+    if (reference) {
+        tasks = JSON.parse(reference);
+
+        updateScreen();
+    }
+}
+
+getFromLocalStorage();
